@@ -1,16 +1,26 @@
 # Knight Travails
 
-This project implements a solution to the **Knight Travails** problem on an 8×8 chessboard using **Breadth-First Search (BFS)**.  
-The goal is to find the **shortest path** a knight can take from a start square to a target square and display all the squares it visits along the way.
+Find the **shortest path** a knight can take from a start square to a target square on an 8×8 chessboard.
 
 ---
 
-## 🧩 Problem Description
+## How it works
 
-- A knight moves in an "L" shape: 2 squares in one direction and 1 square perpendicular.
-- The board is 8×8, indexed from `[0,0]` (top-left) to `[7,7]` (bottom-right).
-- Multiple shortest paths may exist; any shortest path is valid.
+- Uses **Breadth-First Search (BFS)** to find the shortest path.
+- Tracks visited squares so the knight doesn’t revisit.
+- Stores parent positions to reconstruct the path.
+- Returns an array of squares showing the path from start to target.
 
-Example moves from `[0,0]`:
-knight-travails
+---
+
+## Usage
+
+```js
+// Example:
+knightMoves([0, 0], [3, 3]);
+// Output (one possible shortest path):
+// [0,0]
+// [1,2]
+// [3,3]
+```
 
